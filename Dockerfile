@@ -15,6 +15,6 @@ COPY ./website ./website
 WORKDIR /app/website
 
 RUN npm install
-EXPOSE 3000
+EXPOSE 4173
 
 CMD npm run build && npm run preview
