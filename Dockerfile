@@ -15,6 +15,6 @@ COPY ./website ./website
 WORKDIR /app/website
 RUN npm install
 
-EXPOSE 3000
+EXPOSE 5174
 
 CMD ["npm", "run", "dev"]
