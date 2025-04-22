@@ -1,5 +1,9 @@
 # Build the gpx library
 FROM node:18-alpine AS gpx-builder
+
+RUN npm install -g typescript
+RUN npm install -g tsc
+
 WORKDIR /app/gpx
 COPY gpx/package*.json ./
 RUN npm install
