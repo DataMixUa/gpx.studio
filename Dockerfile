@@ -2,12 +2,12 @@
 FROM node:18-alpine AS gpx-builder
 
 RUN npm install -g typescript
-RUN npm install -g tsc
 
 WORKDIR /app/gpx
 COPY gpx/package*.json ./
-RUN npm install
 COPY gpx .
+RUN npm install typescript
+RUN npm install
 RUN npm run build
 
 # Build the SvelteKit website
