@@ -13,9 +13,8 @@ WORKDIR /app
 COPY ./website ./website
 
 WORKDIR /app/website
-RUN npm install
-RUN npm run build
 
+RUN npm install
 EXPOSE 3000
 
-RUN npm run preview
+CMD npm run build && npm run preview
