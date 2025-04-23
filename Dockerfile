@@ -20,7 +20,7 @@ RUN npm install
 ENV PUBLIC_MAPBOX_TOKEN=$PUBLIC_MAPBOX_TOKEN
 
 # 6. Build static site
-ENV NODE_OPTIONS=--max-old-space-size=2048
+ENV NODE_OPTIONS=--max-old-space-size=4096
 RUN npm run build
 
 # 7. Use a minimal web server to serve the static content
