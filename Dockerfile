@@ -1,7 +1,7 @@
 # 1. Use official Node.js image
 FROM node:18-alpine
-
 RUN npm install -g typescript
+RUN npx update-browserslist-db@latest
 
 # 2. Create app directory
 WORKDIR /app
@@ -21,6 +21,7 @@ RUN npm install
 ENV PUBLIC_MAPBOX_TOKEN=$PUBLIC_MAPBOX_TOKEN
 
 # 6. Build static site
+ENV NODE_OPTIONS=--max-old-space-size=2048
 RUN npm run build
 
 # 7. Use a minimal web server to serve the static content
