@@ -17,7 +17,7 @@ WORKDIR /app/website
 RUN npm install
 
 # 5. Add ENV vars (or set at runtime in DigitalOcean UI)
-ENV PUBLIC_MAPBOX_TOKEN=$PUBLIC_MAPBOX_TOKEN
+ENV PUBLIC_MAPBOX_TOKEN=sk.eyJ1Ijoia2Fyb29rYSIsImEiOiJjbTlzN3Q4dTExdXFwMmpzOXFzbHZqenN5In0._KB1tyDqAH0z9qDWqBU5Nw
 
 # 6. Build static site
 ENV NODE_OPTIONS=--max-old-space-size=4096
