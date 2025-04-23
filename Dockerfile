@@ -8,14 +8,12 @@ WORKDIR /app
 # 3. Copy gpx and build it
 COPY ./gpx ./gpx
 WORKDIR /app/gpx
-RUN npx update-browserslist-db@latest
 RUN npm install && npm run build
 
 # 4. Copy website and install dependencies
 WORKDIR /app
 COPY ./website ./website
 WORKDIR /app/website
-RUN npx update-browserslist-db@latest
 RUN npm install
 
 # 5. Add ENV vars (or set at runtime in DigitalOcean UI)
