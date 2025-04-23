@@ -1,6 +1,8 @@
 # 1. Use official Node.js image
 FROM node:18-alpine
 
+RUN npm install -g typescript
+
 # 2. Create app directory
 WORKDIR /app
 
